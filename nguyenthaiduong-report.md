@@ -51,18 +51,25 @@ Tự kiểm bằng `road_check lint` trước khi nộp (bản cuối): đã s�
 1. Tab Labels của project.
 
 ![Tab Labels của project](screenshots/01-labels.png)
+<img width="1268" height="487" alt="image" src="https://github.com/user-attachments/assets/d66b4849-665b-4890-b9fa-f72559452bcb" />
+
 
 2. Một ảnh camera trước đã gán đủ (làn, vùng lái, đèn/biển).
 
 ![Ảnh A01 đã gán đủ](screenshots/02-front-A01.png)
+<img width="1368" height="760" alt="image" src="https://github.com/user-attachments/assets/e822d102-3aca-4bf7-8185-6416a4fde6f6" />
 
 3. Một ảnh fisheye đã gán, phóng to đoạn polyline cong.
 
 ![Ảnh fisheye, polyline cong](screenshots/03-fisheye.png)
+<img width="1255" height="558" alt="image" src="https://github.com/user-attachments/assets/fc4c3373-8cd9-474a-8ada-ef6ee6a1a9c6" />
+
 
 4. Một đoạn XML có `<polyline label="lane">`.
 
 ![Đoạn XML có polyline lane](screenshots/04-xml.png)
+<img width="1842" height="282" alt="image" src="https://github.com/user-attachments/assets/8936d8b4-1bc3-471d-b487-b6182eae2691" />
+
 
 ## 7. Tự đánh giá
 Lỗi bạn mắc nhiều nhất hôm nay (theo mã QC1-xx), và cách tránh ở Ngày 20: **QC1-01** — bản export đầu tiên không có tag nào ở cả 20 ảnh vì tôi chỉ vẽ shape mà quên đặt tag, và sau đó còn đặt sai camera ở 3 ảnh fisheye do đoán theo hình thay vì đọc hậu tố tên file. Thứ hai là **QC1-03**: lane ở camera hai bên để L1/R1 thay vì `other`. Cách tránh: đặt 4 tag là bước đầu tiên của mỗi ảnh, camera lấy theo tên file; chạy `road_check lint` sau mỗi task chứ không đợi đến cuối.  
