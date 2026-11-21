@@ -48,10 +48,21 @@ Tự kiểm bằng `road_check lint` trước khi nộp (bản cuối): đã s�
 | nguyenthaiduong-fisheye.zip | Có (road_check lint đọc được) | B01: 4 / 4 | B02: 9 / 9 | Có, 8/8 ảnh |
 
 ## 6. Ảnh chụp màn hình
-1. Tab Labels của project: `screenshots/01-labels.png`
-2. Một ảnh camera trước đã gán đủ (làn, vùng lái, đèn/biển): `screenshots/02-front-A01.png`
-3. Một ảnh fisheye đã gán, phóng to đoạn polyline cong: `screenshots/03-fisheye.png`
-4. Một đoạn XML có <polyline label="lane">: `screenshots/04-xml.png`
+1. Tab Labels của project.
+
+![Tab Labels của project](screenshots/01-labels.png)
+
+2. Một ảnh camera trước đã gán đủ (làn, vùng lái, đèn/biển).
+
+![Ảnh A01 đã gán đủ](screenshots/02-front-A01.png)
+
+3. Một ảnh fisheye đã gán, phóng to đoạn polyline cong.
+
+![Ảnh fisheye, polyline cong](screenshots/03-fisheye.png)
+
+4. Một đoạn XML có `<polyline label="lane">`.
+
+![Đoạn XML có polyline lane](screenshots/04-xml.png)
 
 ## 7. Tự đánh giá
 Lỗi bạn mắc nhiều nhất hôm nay (theo mã QC1-xx), và cách tránh ở Ngày 20: **QC1-01** — bản export đầu tiên không có tag nào ở cả 20 ảnh vì tôi chỉ vẽ shape mà quên đặt tag, và sau đó còn đặt sai camera ở 3 ảnh fisheye do đoán theo hình thay vì đọc hậu tố tên file. Thứ hai là **QC1-03**: lane ở camera hai bên để L1/R1 thay vì `other`. Cách tránh: đặt 4 tag là bước đầu tiên của mỗi ảnh, camera lấy theo tên file; chạy `road_check lint` sau mỗi task chứ không đợi đến cuối.  
